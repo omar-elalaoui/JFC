@@ -26,7 +26,7 @@ inputs = {
 }
 
 global_data = "644451721849352_data JFC1.xlsx"
-jfc1 = pd.read_excel(global_data, header=1)
+jfc1 = pd.read_excel(global_data, header=1, engine='openpyxl')
 
 # Ensure 'Unnamed: 0' is datetime
 jfc1['Unnamed: 0'] = pd.to_datetime(jfc1['Unnamed: 0'])
